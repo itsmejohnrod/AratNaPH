@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin Sign In</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="centered">
+  <div class="card">
+    <h1>Admin Sign In</h1>
+    <form id="signin-form">
+      <label>Username
+        <input type="text" id="username" required>
+      </label>
+      <label>Password
+        <input type="password" id="password" required>
+      </label>
+      <button type="submit">Sign In</button>
+      <p class="hint">Use username: <strong>admin</strong> and password: <strong>password123</strong> (demo)</p>
+    </form>
+  </div>
+  <script src="assets/app.js"></script>
+  <script>
+    document.getElementById('signin-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      const u = document.getElementById('username').value.trim();
+      const p = document.getElementById('password').value;
+      // Simple client-side demo auth (DO NOT use in production)
+      if(u === 'admin' && p === 'password123'){
+        localStorage.setItem('isAdmin', 'true');
+        localStorage.removeItem('user');
+        window.location.href = 'admin-dashboard.html';
+      } else {
+        alert('Invalid admin credentials');
+      }
+    });
+  </script>
+</body>
+</html>
