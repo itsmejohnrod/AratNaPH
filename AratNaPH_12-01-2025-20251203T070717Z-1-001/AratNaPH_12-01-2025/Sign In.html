@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AratNaPH - Login</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #e9f3f9;
+}
+    header {
+        background: #d9eaf1;
+        padding: 15px 40px;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+    }
+
+    header nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .logo img {
+        height: 100px;
+        width: auto;
+        display: block;
+        }
+
+    .login-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #e9f3f9;
+        margin: 0;
+        }
+
+    .login-container {
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        width: 350px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border: 1px solid #dbe5eb;
+        }
+
+    .login-logo {
+        width: 80px;
+        margin-bottom: 5px;
+        }
+
+    .login-container h1, 
+    .login-container .brand-name {
+        margin: 0;
+        font-size: 22px;
+        font-weight: bold;
+        color: #0b2e4a;
+        }
+
+    .google-login {
+        width: 100%;
+        background: #ccc;
+        border: none;
+        padding: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+        }
+
+    form input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        }
+
+    .login-btn {
+        background: #d9eaf1;
+        border: none;
+        padding: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        }
+
+    .login-links {
+        font-size: 12px;
+        margin-top: 10px;
+        }
+
+    .signup-text {
+        margin-top: 10px;
+        font-size: 14px;
+        }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="Homepage.html" class="logo">
+        <img src="images/Logo.png" alt="AratNaPH Logo">
+    </a>
+
+    <nav>
+        <a href="Destination.html" style="background:#fff; padding:6px 12px; border-radius:20px;">Destinations</a>
+        <a href="Hotel.html" style="background:#fff; padding:6px 12px; border-radius:20px;">Hotels</a>
+        <a href="About Us.html" style="background:#fff; padding:6px 12px; border-radius:20px;">About Us</a>
+        <a href="Contact.html" style="background:#fff; padding:6px 12px; border-radius:20px;">Contact</a>
+    </nav>
+
+    <div>
+        <a href="Sign In.html">Sign In</a> | <a href="Book Now.html">Book Now</a>
+    </div>
+</header>
+
+  <section class="login-page">
+    <div class="login-container">
+      <img src="images/Logo.png" alt="AratNaPH" class="login-logo" />
+      <h2>AratNaPH</h2>
+      <button class="google-login">Continue with Google</button>
+      <p>or</p>
+      <form>
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit" class="login-btn">Log In</button>
+      </form>
+      <div class="login-links">
+        <a href="#">Use single-sign on</a> | 
+        <a href="#">Reset Password</a>
+      </div>
+      <p class="signup-text">No Account? <a href="#">Create one</a></p>
+    </div>
+  </section>
+
+</body>
+</html>

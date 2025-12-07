@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cebu City & South Adventure - Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f5f7fa; }
+    header { background: #d9eaf1; padding: 15px 40px; height: 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ccc; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
+    header nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; background: #fff; padding: 6px 12px; border-radius: 20px; }
+    .logo img { height: 60px; width: auto; display: block; }
+    .main-wrapper { padding-top: 90px; }
+    /* Gallery styles */
+    .gallery-modal { position: fixed; inset: 0; display:flex; align-items:center; justify-content:center; z-index:2000; }
+    .gallery-modal.hidden { display:none; }
+    .gallery-backdrop { position: absolute; inset:0; background: rgba(0,0,0,0.75); }
+    .gallery-content { position: relative; z-index:1; max-width:90%; width:900px; background: transparent; display:flex; align-items:center; justify-content:center; }
+    .gallery-content img { max-width:100%; max-height:80vh; border-radius:6px; box-shadow:0 8px 30px rgba(0,0,0,0.6); }
+    .gallery-prev, .gallery-next, .gallery-close { position: absolute; background: rgba(255,255,255,0.9); border: none; font-size:28px; padding:8px 12px; border-radius:6px; cursor:pointer; }
+    .gallery-prev { left: 10px; }
+    .gallery-next { right: 10px; }
+    .gallery-close { top: 10px; right: 10px; font-size:20px; padding:6px 10px; }
+    .gallery-thumbs { margin-top:12px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap; }
+    .gallery-thumbs img { width:72px; height:48px; object-fit:cover; border-radius:4px; cursor:pointer; opacity:0.8; border:2px solid transparent; }
+    .gallery-thumbs img.active { opacity:1; border-color:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.3); }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../AratNaPH_12-01-2025/Homepage.html" class="logo"><img src="images/Logo.png" alt="AratNaPH Logo"></a>
+    <nav>
+      <a href="../AratNaPH_12-01-2025/Destination.html">Destinations</a>
+      <a href="../AratNaPH_12-01-2025/Hotel.html">Hotels</a>
+      <a href="../AratNaPH_12-01-2025/Packages.html">Packages</a>
+      <a href="../AratNaPH_12-01-2025/About Us.html">About Us</a>
+      <a href="../AratNaPH_12-01-2025/Contact.html">Contact</a>
+    </nav>
+    <div><a href="../AratNaPH_12-01-2025/Sign In.html">Sign In</a> | <a href="../AratNaPH_12-01-2025/Book Now.html">Book Now</a></div>
+  </header>
+  <div class="main-wrapper">
+    <div class="max-w-6xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <main class="lg:col-span-2">
+        <div class="flex justify-between items-start gap-4">
+          <div>
+            <h1 class="text-3xl font-bold text-blue-700">Cebu City & South Adventure</h1>
+            <div class="text-sm text-gray-600"><i class="fas fa-map-marker-alt"></i> Cebu City, Moalboal, Kawasan</div>
+            <div class="mt-2 flex items-center gap-3">
+              <div class="bg-yellow-500 rounded px-3 py-1 font-semibold text-sm text-white">4.9/5 Stars</div>
+              <div class="text-sm text-gray-700"><i class="fas fa-clock"></i> 4 Days, 3 Nights</div>
+            </div>
+          </div>
+          <div class="flex flex-col items-end">
+            <div class="text-sm text-gray-500">Total Package Price</div>
+            <div class="px-3 py-2 text-2xl bg-blue-600 text-white rounded font-bold mt-1">₱16,500</div>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="w-full h-96 rounded overflow-hidden shadow">
+            <img id="tour-main-image" src="images/cebu-tour.jpg" class="w-full h-full object-cover" alt="Kawasan Falls Canyoneering" style="cursor:pointer;">
+          </div>
+        </div>
+        <section class="mt-6 bg-white p-6 rounded shadow-lg">
+          <h2 class="text-xl font-medium mb-3">Tour Overview</h2>
+          <p class="text-gray-700">An action-packed tour combining Cebu's rich history with its breathtaking natural attractions. Spend a day canyoneering through Kawasan Falls and swimming with whale sharks in Oslob, followed by a historical city tour.</p>
+          <h3 class="text-lg font-medium mt-4 mb-2">Inclusions:</h3>
+          <ul class="list-disc ml-6 text-gray-700 text-sm">
+            <li><i class="fas fa-hotel text-blue-500"></i> 3 Nights Accommodation (Cebu City & South Cebu)</li>
+            <li><i class="fas fa-water text-blue-500"></i> Full Kawasan Canyoneering Adventure</li>
+            <li><i class="fas fa-fish text-blue-500"></i> Oslob Whale Shark Watching & Snorkeling</li>
+            <li><i class="fas fa-archway text-blue-500"></i> Cebu City Historical Tour</li>
+            <li><i class="fas fa-utensils text-blue-500"></i> All mandatory government fees and permits</li>
+          </ul>
+        </section>
+      </main>
+      <aside class="lg:col-span-1">
+        <div class="sticky top-20 bg-white p-6 rounded shadow-lg">
+          <h3 class="text-lg font-bold mb-3">Book This Tour</h3>
+          <p class="text-sm text-gray-600 mb-4">Starting at ₱16,500 per person (min. 2 pax)</p>
+          <label class="block text-sm font-semibold mb-1">Travel Date</label>
+          <input type="date" class="w-full p-2 border rounded mb-3">
+          <label class="block text-sm font-semibold mb-1">Number of Guests</label>
+          <input type="number" placeholder="Guests" min="1" value="2" class="w-full p-2 border rounded mb-4">
+          <button onclick="window.location.href='Book Now.html'" class="w-full px-4 py-3 bg-green-600 hover:bg-green-700 rounded text-white font-semibold">Proceed to Booking</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Gallery modal (shared) -->
+  <div id="gallery-modal" class="gallery-modal hidden" role="dialog" aria-hidden="true" aria-label="Image gallery">
+    <div class="gallery-backdrop" data-action="close" tabindex="-1"></div>
+    <div class="gallery-content" role="document">
+      <button class="gallery-close" aria-label="Close gallery" data-action="close">✕</button>
+      <button class="gallery-prev" aria-label="Previous image" data-action="prev">‹</button>
+      <img id="gallery-main-image" src="" alt="" />
+      <button class="gallery-next" aria-label="Next image" data-action="next">›</button>
+      <div class="gallery-thumbs" id="gallery-thumbs" aria-hidden="false"></div>
+    </div>
+  </div>
+
+  <script src="js/gallery.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const img = document.getElementById('tour-main-image');
+      if(img && window.Gallery){ img.addEventListener('click', ()=> Gallery.open([img.src], 0)); }
+      else if(img){ img.addEventListener('click', ()=>{ img.src = img.src; }); }
+    });
+  </script>
+</body>
+</html>

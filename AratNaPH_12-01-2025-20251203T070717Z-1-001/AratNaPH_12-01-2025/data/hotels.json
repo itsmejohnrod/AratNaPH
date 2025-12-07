@@ -1,0 +1,99 @@
+[
+  {
+    "id": "sea-residences",
+    "name": "Sea Residences Moa – Pasay City - Dar Condotel",
+    "description": "A cozy, modern stay just steps from the SM Mall of Asia shopping complex. Comfortable accommodations with views of Manila Bay.",
+    "location": "SM Mall of Asia Complex, Pasay, Manila",
+    "ratingLabel": "Very Good",
+    "score": 8.3,
+    "images": ["images/Hotel1.jpg","images/Hotel1.jpg","images/Hotel1.jpg"],
+    "amenities": ["Free WiFi","Breakfast included","Swimming pool","Air conditioning","24-hour front desk","Laundry service"],
+    "rooms": [
+      {"id":"r1","name":"Deluxe Bay View Room","capacity":2,"refundable":true,"price":5200},
+      {"id":"r2","name":"Superior Room","capacity":2,"refundable":false,"price":4500}
+    ],
+    "reviews": [{"name":"James","score":9,"text":"Great location and friendly staff."}],
+    "priceFrom": 5200,
+    "detailsUrl": "hotel-detail.html?id=sea-residences"
+  },
+  {
+    "id": "makati-hotel",
+    "name": "Makati Hotel – Flavors Restaurant",
+    "description": "Flavors Restaurant brings together the best of modern comfort cuisine in a relaxed hotel setting near the business district.",
+    "location": "Makati, Manila",
+    "ratingLabel": "Very Good",
+    "score": 8.3,
+    "images": ["images/Makati Hotel.jpg","images/Hotel2.jpg"],
+    "amenities": ["Free WiFi","On-site restaurant","Fitness center","Airport shuttle"],
+    "rooms": [
+      {"id":"r1","name":"Standard Room","capacity":2,"refundable":true,"price":6800}
+    ],
+    "reviews": [{"name":"Anna","score":8,"text":"Convenient location and clean rooms."}],
+    "priceFrom": 6800,
+    "detailsUrl": "hotel-detail.html?id=makati-hotel"
+  },
+  {
+    "id": "somerset",
+    "name": "Somerset Millennium Makati",
+    "description": "Elegant serviced apartments offering spacious rooms and a central Makati address.",
+    "location": "Makati, Manila",
+    "ratingLabel": "Very Good",
+    "score": 8.0,
+    "images": ["images/Hotel2.jpg"],
+    "amenities": ["Kitchenette","Swimming pool","Gym","Free parking"],
+    "rooms": [
+      {"id":"r1","name":"One-Bedroom Suite","capacity":2,"refundable":true,"price":7400}
+    ],
+    "reviews": [{"name":"Paul","score":8,"text":"Great for longer stays."}],
+    "priceFrom": 7400,
+    "detailsUrl": "hotel-detail.html?id=somerset"
+  },
+  {
+    "id": "leblanc",
+    "name": "LeBlanc Hotel",
+    "description": "A boutique stay offering curated experiences and high-end suites in Metro Manila.",
+    "location": "Rizal, Antipolo",
+    "ratingLabel": "Very Good",
+    "score": 7.9,
+    "images": ["images/Hotel4.jpg"],
+    "amenities": ["Restaurant","Spa","Free WiFi"],
+    "rooms": [
+      {"id":"r1","name":"Premier Suite","capacity":2,"refundable":true,"price":6100}
+    ],
+    "reviews": [{"name":"Liza","score":8,"text":"Peaceful escape from the city."}],
+    "priceFrom": 6100,
+    "detailsUrl": "hotel-detail.html?id=leblanc"
+  },
+  {
+    "id": "anex",
+    "name": "Anex Hotel near US Embassy",
+    "description": "Comfortable, budget-friendly rooms close to major attractions and embassy district.",
+    "location": "Ermita, Manila",
+    "ratingLabel": "Good",
+    "score": 7.1,
+    "images": ["images/Anex.jpg"],
+    "amenities": ["Free WiFi","24-hour front desk"],
+    "rooms": [
+      {"id":"r1","name":"Budget Room","capacity":2,"refundable":false,"price":3200}
+    ],
+    "reviews": [{"name":"Ken","score":7,"text":"Simple and convenient."}],
+    "priceFrom": 3200,
+    "detailsUrl": "hotel-detail.html?id=anex"
+  },
+  {
+    "id": "lcondotel",
+    "name": "LCONDOTEL Hotel Studio – at Imperial Plaza near MOA NAIA PITX",
+    "description": "Studio-style rooms near the Mall of Asia and transport hubs.",
+    "location": "Parañaque, Manila",
+    "ratingLabel": "Very Good",
+    "score": 8.1,
+    "images": ["images/Imperial.jpg"],
+    "amenities": ["Kitchenette","Free parking","Close to transport"],
+    "rooms": [
+      {"id":"r1","name":"Studio","capacity":2,"refundable":true,"price":4500}
+    ],
+    "reviews": [{"name":"Mia","score":8,"text":"Great location for transit."}],
+    "priceFrom": 4500,
+    "detailsUrl": "hotel-detail.html?id=lcondotel"
+  }
+]

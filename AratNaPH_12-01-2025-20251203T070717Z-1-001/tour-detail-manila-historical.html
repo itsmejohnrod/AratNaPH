@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manila Historical City Tour - Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f5f7fa; }
+    header { background: #d9eaf1; padding: 15px 40px; height: 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ccc; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
+    header nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; background: #fff; padding: 6px 12px; border-radius: 20px; }
+    .logo img { height: 60px; width: auto; display: block; }
+    .main-wrapper { padding-top: 90px; }
+    
+    /* Custom Footer Styles for consistency */
+    footer { background: #333; color: white; padding: 30px 40px; margin-top: 40px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; }
+    footer a { color: #ccc; text-decoration: none; display: block; margin-top: 5px; }
+    footer h4 { color: #d9eaf1; margin-bottom: 10px; }
+
+    /* Media query that VS Code often flags in internal styles */
+    @media (max-width: 768px) {
+        .footer-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="Homepage.html" class="logo"><img src="images/Logo.png" alt="AratNaPH Logo"></a>
+    <nav>
+      <a href="Destination.html">Destinations</a>
+      <a href="Hotel.html">Hotels</a>
+      <a href="Packages.html">Packages</a>
+      <a href="About Us.html">About Us</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+    <div><a href="Sign In.html">Sign In</a> | <a href="Book Now.html">Book Now</a></div>
+  </header>
+  <div class="main-wrapper">
+    <div class="max-w-6xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <main class="lg:col-span-2">
+        <div class="flex justify-between items-start gap-4">
+          <div>
+            <h1 class="text-3xl font-bold text-blue-700">Manila's Historical & Cultural Immersion</h1>
+            <div class="text-sm text-gray-600"><i class="fas fa-map-marker-alt"></i> Manila (Intramuros, Rizal Park)</div>
+            <div class="mt-2 flex items-center gap-3">
+              <div class="bg-yellow-500 rounded px-3 py-1 font-semibold text-sm text-white">4.7/5 Stars</div>
+              <div class="text-sm text-gray-700"><i class="fas fa-clock"></i> 3 Days, 2 Nights</div>
+            </div>
+          </div>
+          <div class="flex flex-col items-end">
+            <div class="text-sm text-gray-500">Total Package Price</div>
+            <div class="px-3 py-2 text-2xl bg-blue-600 text-white rounded font-bold mt-1">₱9,500</div>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="w-full h-96 rounded overflow-hidden shadow">
+            <img src="images/ManilaHistorical.jpg" class="w-full h-full object-cover" alt="Walled City of Intramuros, Manila">
+          </div>
+        </div>
+        <section class="mt-6 bg-white p-6 rounded shadow-lg">
+          <h2 class="text-xl font-medium mb-3">Tour Overview</h2>
+          <p class="text-gray-700">Step back in time within the Walled City of Intramuros and explore the nation's past. This package is for the history enthusiast, diving deep into the Spanish Colonial era, its architecture, and the stories of old Manila. Includes a guided tour of key historical sites.</p>
+          <h3 class="text-lg font-medium mt-4 mb-2">Inclusions:</h3>
+          <ul class="list-disc ml-6 text-gray-700 text-sm space-y-2">
+            <li><i class="fas fa-bed text-blue-500"></i> 2-Night Heritage Hotel Stay</li>
+            <li><i class="fas fa-bicycle text-blue-500"></i> Guided Intramuros Tour (Bambike)</li>
+            <li><i class="fas fa-university text-blue-500"></i> National Museum Entrance Fees</li>
+            <li><i class="fas fa-coffee text-blue-500"></i> Daily Breakfast</li>
+          </ul>
+            <h3 class="text-lg font-medium mt-4 mb-2">Itinerary Highlights:</h3>
+            <ul class="list-disc ml-6 text-gray-700 text-sm">
+                <li>Full-day exploration of Intramuros, including Fort Santiago.</li>
+                <li>Visit to San Agustin Church (UNESCO World Heritage Site).</li>
+                <li>Tour of the National Museum of Fine Arts and National Museum of Anthropology.</li>
+                <li>Sunset viewing at Rizal Park.</li>
+            </ul>
+        </section>
+      </main>
+      <aside class="lg:col-span-1">
+        <div class="sticky top-20 bg-white p-6 rounded shadow-lg">
+          <h3 class="text-lg font-bold mb-3">Book This Tour</h3>
+          <p class="text-sm text-gray-600 mb-4">Starting at ₱9,500 per person (min. 2 pax)</p>
+          <label class="block text-sm font-semibold mb-1">Travel Date</label>
+          <input type="date" class="w-full p-2 border rounded mb-3">
+          <label class="block text-sm font-semibold mb-1">Number of Guests</label>
+          <input type="number" placeholder="Guests" min="1" value="2" class="w-full p-2 border rounded mb-4">
+          <button onclick="window.location.href='Book Now.html'" class="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 rounded text-white font-semibold">Proceed to Booking</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <strong>AratNaPH</strong>
+                <p>Your trusted partner for discovering the beauty of the Philippines.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <a href="Destination.html">Destinations</a>
+                <a href="Hotel.html">Hotels</a>
+                <a href="Packages.html">Packages</a>
+                <a href="Book Now.html">Book Now</a>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <a href="#">Help Center</a>
+                <a href="Contact.html">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+            <div>
+                <h4>Contact Info</h4>
+                <p>📍 Manila, Philippines</p>
+                <p>📞 +63 912 345 6789</p>
+                <p>📧 support@aratnaph.com</p>
+            </div>
+        </div>
+    </footer>
+  <!-- Shared gallery modal (added by script) -->
+  <div id="gallery-modal" class="gallery-modal hidden" role="dialog" aria-hidden="true" aria-label="Image gallery" style="display:none;">
+    <div class="gallery-backdrop" data-action="close" tabindex="-1"></div>
+    <div class="gallery-content" role="document">
+      <button class="gallery-close" aria-label="Close gallery" data-action="close">✕</button>
+      <button class="gallery-prev" aria-label="Previous image" data-action="prev">‹</button>
+      <img id="gallery-main-image" src="" alt="" />
+      <button class="gallery-next" aria-label="Next image" data-action="next">›</button>
+      <div class="gallery-thumbs" id="gallery-thumbs" aria-hidden="false"></div>
+    </div>
+  </div>
+
+  <script src="js/gallery.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const img = document.getElementById('tour-main-image') || document.querySelector('.main-wrapper img') || document.querySelector('img');
+      if(img){ img.style.cursor='pointer'; img.addEventListener('click', ()=>{ try{ if(window.Gallery) Gallery.open([img.src],0); else window.open(img.src,'_blank'); }catch(e){ window.open(img.src,'_blank'); }});
+      }
+    });
+  </script>
+  </body>
+</html>

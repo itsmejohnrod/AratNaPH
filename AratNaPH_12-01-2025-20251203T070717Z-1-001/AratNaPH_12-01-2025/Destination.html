@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Explore Destinations</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f5f7fa;
+        color: #333;
+    }
+
+    /* Consistent Header Styles */
+    header {
+        background: #d9eaf1;
+        padding: 10px 40px;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .logo img {
+        height: 60px; /* Normalized logo size */
+        width: auto;
+        display: block;
+    }
+
+    header nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        padding: 6px 12px;
+        border-radius: 20px;
+    }
+    
+    header nav a:hover {
+        background: #e0e0e0;
+    }
+
+    header nav a.active {
+        background: white; /* Active link style */
+        color: #000;
+    }
+    
+    .auth-links a {
+        margin-left: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #000;
+    }
+
+    .auth-links a:hover {
+        text-decoration: underline;
+    }
+    /* End Header Styles */
+
+    /* Destination Page Specific Styles */
+    .title {
+        text-align: center;
+        font-size: 36px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .grid {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 0 20px;
+    }
+
+    .card {
+        display: flex;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+        width: 50%;
+        object-fit: cover;
+    }
+
+    .info {
+        padding: 20px;
+        width: 50%;
+    }
+
+    .info h3 {
+        margin: 5px 0;
+        font-size: 22px;
+        color: #007BFF;
+    }
+
+    .info p {
+        font-size: 14px;
+        color: #444;
+        line-height: 1.4;
+    }
+
+    .highlights {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .info ul {
+        margin: 5px 0 15px 15px;
+        font-size: 14px;
+        padding-left: 0;
+        list-style-type: none;
+    }
+    
+    .info ul li::before {
+        content: "• ";
+        color: #007BFF;
+        font-weight: bold;
+        display: inline-block; 
+        width: 1em;
+        margin-left: -1em;
+    }
+
+    .info button {
+        padding: 10px 20px;
+        border-radius: 8px;
+        border: 1px solid #333;
+        background: #fff;
+        cursor: pointer;
+        transition: background 0.3s, color 0.3s;
+    }
+    
+    .info button:hover {
+        background: #333;
+        color: white;
+    }
+    /* End Destination Page Specific Styles */
+
+    /* Consistent Footer Styles */
+    footer {
+        background: #d9eaf1;
+        padding: 40px 20px;
+        margin-top: 60px;
+    }
+    .footer-grid {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    footer h4 { margin-bottom: 10px; }
+    footer a { /* Change P tags to A tags and style them */
+        display: block;
+        margin: 6px 0;
+        text-decoration: none;
+        color: #333;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
+    /* End Footer Styles */
+
+    /* Responsive Design for Destination Grid */
+    @media (max-width: 992px) {
+        .grid {
+            grid-template-columns: 1fr;
+        }
+        .card {
+            flex-direction: column;
+        }
+        .card img, .info {
+            width: 100%;
+        }
+        .card img {
+            height: 250px;
+        }
+    }
+</style>
+</head>
+<body>
+<header>
+    <a href="Homepage.html" class="logo">
+        <img src="images/Logo.png" alt="AratNaPH Logo">
+    </a>
+    <nav>
+        <a href="Destination.html" class="active">Destinations</a>
+        <a href="Hotel.html">Hotels</a>
+        <a href="Packages.html">Packages</a>
+        <a href="About Us.html">About Us</a>
+        <a href="Contact.html">Contact</a>
+    </nav>
+    <div class="auth-links">
+        <a href="Sign In.html">Sign In</a> | <a href="Book Now.html">Book Now</a>
+    </div>
+</header>
+
+<h1 class="title">Top Destinations in the Philippines</h1>
+
+<div class="grid">
+    
+    <div class="card">
+        <img src="images/Palawan.jpg">
+        <div class="info">
+            <h3>📍 Palawan</h3>
+            <p>Known as the 'Last Frontier' with stunning limestone cliffs, crystal-clear waters, and underground rivers.</p>
+            <div class="highlights">Top Highlights:</div>
+            <ul>
+                <li>El Nido</li>
+                <li>Coron</li>
+                <li>Puerto Princesa Subterranean River</li>
+            </ul>
+            <button onclick="window.location.href='Packages.html?location=Palawan'">View Tours</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/Bohol.jpg">
+        <div class="info">
+            <h3>📍 Bohol</h3>
+            <p>Home to the Chocolate Hills, tarsiers, and stunning beaches.</p>
+            <div class="highlights">Top Highlights:</div>
+            <ul>
+                <li>Alona Beach</li>
+                <li>Panglao Beach</li>
+                <li>Bilar Man-Made Forest</li>
+            </ul>
+            <button onclick="window.location.href='Packages.html?location=Bohol'">View Tours</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/Boracay.jpg">
+        <div class="info">
+            <h3>📍 Boracay</h3>
+            <p>Famous for its powdery white sand and vibrant nightlife, perfect for a classic beach getaway.</p>
+            <div class="highlights">Top Highlights:</div>
+            <ul>
+                <li>White Beach</li>
+                <li>Puka Beach</li>
+                <li>Mount Luho</li>
+            </ul>
+            <button onclick="window.location.href='Packages.html?location=Boracay'">View Tours</button>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="images/Baguio.jpg">
+        <div class="info">
+            <h3>📍 Baguio</h3>
+            <p>The Summer Capital of the Philippines, offering a cool climate and pine-scented air.</p>
+            <div class="highlights">Top Highlights:</div>
+            <ul>
+                <li>Burnham Park</li>
+                <li>Mines View Park</li>
+                <li>The Mansion</li>
+            </ul>
+            <button onclick="window.location.href='Packages.html?location=Baguio'">View Tours</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/Manila.jpg">
+        <div class="info">
+            <h3>📍 Manila</h3>
+            <p>The capital city, a bustling hub rich in history, from Spanish colonial structures to modern skyscrapers.</p>
+            <div class="highlights">Top Highlights:</div>
+            <ul>
+                <li>Intramuros</li>
+                <li>Manila Cathedral</li>
+            </ul>
+            <button onclick="window.location.href='Packages.html?location=Manila'">View Tours</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/Cebu.jpg">
+        <div class="info">
+            <h3>📍 Cebu</h3>
+            <p>Rich in history and natural wonders, from beaches to mountains.</p>
+            <div class="highlights">Top Highlights:</div>
+            <ul>
+                <li>Magellan's Cross</li>
+                <li>Fort San Pedro</li>
+            </ul>
+            <button onclick="window.location.href='Packages.html?location=Cebu'">View Tours</button>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <div class="footer-grid">
+        <div>
+            <strong>AratNaPH</strong>
+            <p>Your trusted partner for discovering the beauty of the Philippines.</p>
+        </div>
+        <div>
+            <h4>Quick Links</h4>
+            <a href="Destination.html">Destinations</a>
+            <a href="Hotel.html">Hotels</a>
+            <a href="Packages.html">Packages</a>
+            <a href="Book Now.html">Book Now</a>
+        </div>
+        <div>
+            <h4>Support</h4>
+            <a href="#">Help Center</a>
+            <a href="Contact.html">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+        <div>
+            <h4>Contact Info</h4>
+            <p>📍 Manila, Philippines</p>
+            <p>📞 +63 912 345 6789</p>
+            <p>📧 support@aratnaph.com</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

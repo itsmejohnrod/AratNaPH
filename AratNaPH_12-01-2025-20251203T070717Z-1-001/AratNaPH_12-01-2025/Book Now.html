@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Complete Your Booking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', Arial, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+    }
+
+    /* Consistent Header Styles */
+    header {
+        background: #d9eaf1;
+        padding: 10px 40px;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .logo img {
+        height: 60px; /* Normalized logo size */
+        width: auto;
+        display: block;
+    }
+
+    header nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        padding: 6px 12px;
+        border-radius: 20px;
+    }
+    
+    header nav a:hover {
+        background: #e0e0e0;
+    }
+
+    header nav a.active {
+        background: white; /* Active link style */
+        color: #000;
+    }
+    
+    .auth-links a {
+        margin-left: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #000;
+    }
+
+    .auth-links a:hover {
+        text-decoration: underline;
+    }
+    /* End Header Styles */
+
+    /* Booking Page Specific Styles */
+    h1 {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 42px;
+    }
+
+    .subtitle {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 16px;
+        color: #666;
+    }
+
+    .form-container {
+        width: 70%;
+        max-width: 900px;
+        margin: 0 auto 60px auto;
+        background: #e6e6e6;
+        padding: 40px;
+        border-radius: 15px;
+    }
+
+    .section-title {
+        font-size: 22px;
+        font-weight: 600;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .form-row {
+        display: flex;
+        gap: 20px;
+        margin-top: 15px;
+    }
+
+    .form-group {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+    }
+
+    input, select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        margin-top: 5px;
+        background: #f8f8f8;
+        box-sizing: border-box; /* Ensures padding is inside width */
+    }
+
+    .summary-box {
+        background: #d9d9d9;
+        padding: 20px;
+        margin-top: 25px;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+
+    .summary-box p {
+        display: flex;
+        justify-content: space-between;
+        margin: 8px 0;
+    }
+
+    .confirm-btn {
+        margin-top: 25px;
+        width: 100%;
+        padding: 12px;
+        background: #007BFF; /* Changed to a better primary color */
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.3s;
+    }
+
+    .confirm-btn:hover {
+        background: #0056b3;
+    }
+    /* End Booking Page Specific Styles */
+
+    /* Consistent Footer Styles */
+    footer {
+        background: #d9eaf1;
+        padding: 40px 20px;
+        margin-top: 60px;
+    }
+    .footer-grid {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    footer h4 { margin-bottom: 10px; }
+    footer a { /* Change P tags to A tags and style them */
+        display: block;
+        margin: 6px 0;
+        text-decoration: none;
+        color: #333;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
+    /* End Footer Styles */
+
+    @media (max-width: 768px) {
+        .form-container {
+            width: 90%;
+            padding: 20px;
+        }
+        .form-row {
+            flex-direction: column;
+            gap: 0;
+        }
+        .footer-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+</head>
+<body>
+<header>
+    <a href="Homepage.html" class="logo">
+        <img src="images/Logo.png" alt="AratNaPH Logo">
+    </a>
+    <nav>
+        <a href="Destination.html">Destinations</a>
+        <a href="Hotel.html">Hotels</a>
+        <a href="Packages.html">Packages</a>
+        <a href="About Us.html">About Us</a>
+        <a href="Contact.html">Contact</a>
+    </nav>
+    <div class="auth-links">
+        <a href="Sign In.html">Sign In</a> | <a href="Book Now.html" class="active">Book Now</a>
+    </div>
+</header>
+
+<h1>Complete Your Booking</h1>
+<p class="subtitle">Enter your details and payment information to confirm your trip.</p>
+
+<div class="form-container">
+    <form>
+        <div class="section-title">
+            <i class="fas fa-user-check"></i> Traveler Information
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstName" required />
+            </div>
+            <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastName" required />
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phoneNumber" />
+            </div>
+        </div>
+
+        <div class="form-group" style="margin-top: 15px;">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required />
+        </div>
+
+        <div class="section-title">
+            <i class="fas fa-credit-card"></i> Payment Method
+        </div>
+
+        <div class="form-group">
+            <label for="cardtype">Card Type</label>
+            <select id="cardtype" name="cardType">
+                <option>Visa</option>
+                <option>MasterCard</option>
+                <option>American Express</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="cardname">Name on Card</label>
+            <input type="text" id="cardname" name="cardName" required />
+        </div>
+
+        <div class="form-group">
+            <label for="cardnumber">Card Number</label>
+            <input type="text" id="cardnumber" name="cardNumber" />
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="expiry">Expiry Date</label>
+                <input type="text" id="expiry" name="expiryDate" placeholder="MM/YY" required />
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" required />
+            </div>
+        </div>
+
+        <div class="summary-box">
+            <p><strong>Booking Summary</strong><span>Details</span></p>
+            <p>Package Price:<span>₱12,000.00</span></p>
+            <p>Service Fee:<span>₱500.00</span></p>
+            <p>Taxes:<span>₱1,500.00</span></p>
+            <hr />
+            <p><strong>Total:</strong><strong>₱14,000.00</strong></p>
+        </div>
+
+        <button class="confirm-btn" type="submit">Confirm Booking</button>
+    </form>
+</div>
+
+<footer>
+    <div class="footer-grid">
+        <div>
+            <strong>AratNaPH</strong>
+            <p>Your trusted partner for discovering the beauty of the Philippines.</p>
+        </div>
+        <div>
+            <h4>Quick Links</h4>
+            <a href="Destination.html">Destinations</a>
+            <a href="Hotel.html">Hotels</a>
+            <a href="Packages.html">Packages</a>
+            <a href="Book Now.html">Book Now</a>
+        </div>
+        <div>
+            <h4>Support</h4>
+            <a href="#">Help Center</a>
+            <a href="Contact.html">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+        <div>
+            <h4>Contact Info</h4>
+            <p>📍 Manila, Philippines</p>
+            <p>📞 +63 912 345 6789</p>
+            <p>📧 support@aratnaph.com</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

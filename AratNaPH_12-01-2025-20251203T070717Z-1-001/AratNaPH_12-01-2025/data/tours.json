@@ -1,0 +1,68 @@
+[
+  {
+    "id": "elnido",
+    "title": "Ultimate El Nido Island Hopping",
+    "destination": "elnido",
+    "price": 12800,
+    "duration": "4 Days, 3 Nights",
+    "image": "images/elnido-tour.jpg",
+    "images": ["images/elnido-tour.jpg","images/Palawan.jpg","images/Coron.jpg"],
+    "description": "Experience the stunning lagoons, hidden beaches, and towering limestone cliffs of Palawan.",
+    "detailsUrl": "tour-detail-elnido.html"
+  },
+  {
+    "id": "boracay",
+    "title": "Boracay Beach & Water Sports Fun",
+    "destination": "boracay",
+    "price": 9500,
+    "duration": "3 Days, 2 Nights",
+    "image": "images/boracay-tour.jpg",
+    "images": ["images/boracay-tour.jpg","images/Boracay.jpg"],
+    "description": "Enjoy the famous white-sand beach and try out exciting water activities.",
+    "detailsUrl": "tour-detail-boracay.html"
+  },
+  {
+    "id": "bohol",
+    "title": "Bohol Nature & Culture Explorer",
+    "destination": "bohol",
+    "price": 14500,
+    "duration": "4 Days, 3 Nights",
+    "image": "images/bohol-tour.jpg",
+    "images": ["images/bohol-tour.jpg","images/Bohol.jpg"],
+    "description": "See the unique Chocolate Hills, encounter tiny Tarsiers, and cruise the Loboc River.",
+    "detailsUrl": "tour-detail-bohol.html"
+  },
+  {
+    "id": "cebu",
+    "title": "Cebu City & South Adventure",
+    "destination": "cebu",
+    "price": 16500,
+    "duration": "4 Days, 3 Nights",
+    "image": "images/cebu-tour.jpg",
+    "images": ["images/cebu-tour.jpg","images/Cebu.jpg"],
+    "description": "Explore the historic sites of the city and head south for canyoneering and snorkeling.",
+    "detailsUrl": "tour-detail-cebu.html"
+  },
+  {
+    "id": "baguio",
+    "title": "Baguio Cool Escapes",
+    "destination": "baguio",
+    "price": 8900,
+    "duration": "3 Days, 2 Nights",
+    "image": "images/baguio-tour.jpg",
+    "images": ["images/baguio-tour.jpg","images/Baguio.jpg"],
+    "description": "Relax in the City of Pines. Perfect for family outings and enjoying the cool mountain climate.",
+    "detailsUrl": "tour-detail-baguio.html"
+  },
+  {
+    "id": "manila",
+    "title": "Manila Heritage Trail",
+    "destination": "manila",
+    "price": 11200,
+    "duration": "3 Days, 2 Nights",
+    "image": "images/manila-tour.jpg",
+    "images": ["images/manila-tour.jpg","images/Manila.jpg"],
+    "description": "A deep dive into the nation's history, exploring Intramuros and historic churches.",
+    "detailsUrl": "tour-detail-manila-historical.html"
+  }
+]

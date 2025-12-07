@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Look for Hotels</title>
+<style>
+    body {
+        margin:0;
+        font-family:Arial, sans-serif;
+        background:#f5f7fa;
+    }
+    header {
+        background:#d9eaf1;
+        padding:15px 40px;
+        height: 30px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        border-bottom:1px solid #ccc;
+    }
+    header nav a { margin:0 15px;
+        text-decoration:none;
+        color:#333;
+        font-weight:bold;
+    }
+    header nav a.active {
+        background:#fff;
+        padding:6px 12px;
+        border-radius:20px;
+    }
+    .logo img {
+        height: 100px;
+        width: auto;
+        display: block;
+    }
+    .title {
+        text-align:center;
+        font-size:40px;
+        margin-top:30px;
+        margin-bottom:20px;
+    }
+    .grid {
+        max-width:1200px;
+        margin:auto;
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        gap:30px;
+    }
+    .card {
+        display:flex;
+        gap:20px;
+        background:white;
+        padding:20px;
+        border-radius:12px;
+        box-shadow:0 2px 8px rgba(0,0,0,0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card.clickable {
+        cursor: pointer;
+    }
+    .card.clickable:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .card img {
+        width:40%;
+        border-radius:12px;
+        object-fit:cover;
+    }
+    .info h3 {
+        margin:0;
+        font-size:20px;
+    }
+    .location {
+        margin:5px 0;
+        color:#0077cc;
+        font-size:14px;
+        text-decoration:underline;
+        cursor:pointer;
+    }
+    .rating {
+        margin-top:10px;
+        display:flex;
+        align-items:center;
+        gap:10px;
+        font-size:16px;
+        font-weight:bold;
+    }
+    .score {
+        background:#e6f0ff;
+        padding:6px 12px;
+        border-radius:8px;
+    }
+    .btn {
+        margin-top:15px;
+        padding:10px 20px;
+        border-radius:8px;
+        border:1px solid #333;
+        background:white;
+        cursor:pointer;
+    }
+
+    footer {
+        background: #d9eaf1;
+        padding: 40px 20px;
+        margin-top: 60px;
+    }
+    .footer-grid {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    footer h4 { margin-bottom: 10px; }
+    /* Added styles for anchor tags in footer for fixed quick links */
+    footer a { 
+        display: block;
+        margin: 6px 0;
+        text-decoration: none;
+        color: #333;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <a href="Homepage.html" class="logo">
+        <img src="images/Logo.png" alt="AratNaPH Logo">
+    </a>
+
+    <nav>
+        <a href="Destination.html">Destinations</a>
+        <a href="Hotel.html" style="background:#fff; padding:6px 12px; border-radius:20px;">Hotels</a>
+        <a href="About Us.html">About Us</a>
+        <a href="Contact.html">Contact</a>
+    </nav>
+
+    <div>
+        <a href="Sign In.html">Sign In</a> | <a href="Book Now.html">Book Now</a>
+    </div>
+</header>
+
+<h1 class="title">Look for Hotels</h1>
+
+<div class="grid" id="hotel-grid">
+  <!-- Hotel cards will be rendered here by js/hotels.js -->
+</div>
+
+<footer>
+    <div class="footer-grid">
+        <div>
+            <strong>AratNaPH</strong>
+            <p>Your trusted partner for discovering the beauty of the Philippines.</p>
+        </div>
+        <div>
+            <h4>Quick Links</h4>
+            <a href="Destination.html">Destinations</a>
+            <a href="Hotel.html">Hotels</a>
+            <a href="Packages.html">Packages</a>
+            <a href="Book Now.html">Book Now</a>
+        </div>
+        <div>
+            <h4>Support</h4>
+            <a href="#">Help Center</a>
+            <a href="Contact.html">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+        <div>
+            <h4>Contact Info</h4>
+            <p>📍 Manila, Philippines</p>
+            <p>📞 +63 900 000 0000</p>
+            <p>✉ support@aratnaph.com</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/hotels.js"></script>
+
+</body>
+</html>
