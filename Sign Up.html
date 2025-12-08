@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="AratNaPH_12-01-2025/styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; background: #e9f3f9; color: #333; margin: 0; }
+        header {
+            background: #d9eaf1;
+            padding: 10px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+        .logo img {
+            height: 60px;
+            width: auto;
+            display: block;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 20px;
+        }
+        nav a:hover {
+            background: #e0e0e0;
+        }
+        .auth-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #000;
+        }
+        .auth-links a:hover {
+            text-decoration: underline;
+        }
+        .signup-container {
+            max-width: 400px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px 30px 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .signup-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .signup-container label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+        .signup-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .signup-container button {
+            width: 100%;
+            padding: 10px;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .signup-container button:hover {
+            background: #0056b3;
+        }
+        .signup-container .signin-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .signup-container .signin-link a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .signup-container .signin-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <a href="Homepage.html" class="logo">
+        <img src="AratNaPH_12-01-2025/images/Logo.png" alt="AratNaPH Logo">
+    </a>
+    <nav>
+        <a href="Destination.html">Destinations</a>
+        <a href="Hotel.html">Hotels</a>
+        <a href="Packages.html">Packages</a>
+        <a href="About Us.html">About Us</a>
+        <a href="Contact.html">Contact</a>
+    </nav>
+    <div class="auth-links">
+        <a href="Sign In.html">Sign In</a> | <a href="Book Now.html">Book Now</a>
+    </div>
+</header>
+<div class="signup-container">
+    <h2>Create an Account</h2>
+    <form>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+        <button type="submit">Sign Up</button>
+    </form>
+    <div class="signin-link">
+        Already have an account? <a href="Sign In.html">Sign In</a>
+    </div>
+</div>
+</body>
+</html>
