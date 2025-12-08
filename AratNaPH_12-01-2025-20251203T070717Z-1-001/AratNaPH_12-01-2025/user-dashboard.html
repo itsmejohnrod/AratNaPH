@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="AratNaPH_12-01-2025/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body { font-family: Arial, sans-serif; background: #e9f3f9; color: #333; margin: 0; }
+        header {
+            background: #d9eaf1;
+            padding: 10px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+        .logo img {
+            height: 60px;
+            width: auto;
+            display: block;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 20px;
+        }
+        nav a:hover {
+            background: #e0e0e0;
+        }
+        .auth-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #000;
+        }
+        .auth-links a:hover {
+            text-decoration: underline;
+        }
+        .container { padding: 30px; }
+        .card { background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .card h2 { margin-top: 0; }
+        .book-now-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .book-now-btn:hover {
+            background: #0056b3;
+        }
+        footer {
+            background: #d9eaf1;
+            padding: 40px 20px;
+        }
+        .footer-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        footer h4 { margin-bottom: 10px; }
+        footer a {
+            display: block;
+            margin: 6px 0;
+            text-decoration: none;
+            color: #333;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <a href="Homepage.html" class="logo">
+        <img src="AratNaPH_12-01-2025/images/Logo.png" alt="AratNaPH Logo">
+    </a>
+    <nav>
+        <a href="Destination.html">Destinations</a>
+        <a href="Hotel.html">Hotels</a>
+        <a href="Packages.html">Packages</a>
+        <a href="About Us.html">About Us</a>
+        <a href="Contact.html">Contact</a>
+    </nav>
+    <div class="auth-links">
+        <a href="Book Now.html">Book Now</a>
+        <a href="Sign In.html" title="Log Out" style="margin-left:10px;"><i class="fas fa-sign-out-alt"></i></a>
+    </div>
+</header>
+<div class="container">
+    <div class="card">
+        <h2>Welcome!</h2>
+        <p>Here you can view your bookings, update your profile, and explore new packages.</p>
+    </div>
+    <div class="card">
+        <h2>My Bookings</h2>
+        <a class="book-now-btn" href="Homepage.html">Book Now</a>
+    </div>
+    <div class="card">
+        <h2>Recommended Packages</h2>
+        <ul>
+            <li><a href="tour-detail-boracay.html">Boracay Getaway</a></li>
+            <li><a href="tour-detail-cebu.html">Cebu Adventure</a></li>
+            <li><a href="tour-detail-baguio.html">Baguio Nature Trip</a></li>
+        </ul>
+    </div>
+</div>
+<footer>
+    <div class="footer-grid">
+        <div>
+            <strong>AratNaPH</strong>
+            <p>Your trusted partner for discovering the beauty of the Philippines.</p>
+        </div>
+        <div>
+            <h4>Quick Links</h4>
+            <a href="Destination.html">Destinations</a>
+            <a href="Hotel.html">Hotels</a>
+            <a href="Packages.html">Packages</a>
+            <a href="Book Now.html">Book Now</a>
+        </div>
+        <div>
+            <h4>Support</h4>
+            <a href="#">Help Center</a>
+            <a href="Contact.html">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+        <div>
+            <h4>Contact Info</h4>
+            <p>📍 Manila, Philippines</p>
+            <p>📞 +63 912 345 6789</p>
+            <p>📧 support@aratnaph.com</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

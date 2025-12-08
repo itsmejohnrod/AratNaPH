@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Users</title>
+    <link rel="stylesheet" href="AratNaPH_12-01-2025/styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; background: #e9f3f9; color: #333; margin: 0; }
+        header {
+            background: #d9eaf1;
+            padding: 10px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+        .logo img {
+            height: 60px;
+            width: auto;
+            display: block;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 20px;
+        }
+        nav a:hover {
+            background: #e0e0e0;
+        }
+        .container { padding: 30px; }
+        .card { background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .card h2 { margin-top: 0; }
+        .user-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .user-table th, .user-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        .user-table th {
+            background: #d9eaf1;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <a href="Homepage.html" class="logo">
+        <img src="AratNaPH_12-01-2025/images/Logo.png" alt="AratNaPH Logo">
+    </a>
+    <nav>
+        <a href="admin-dashboard.html">Dashboard</a>
+        <a href="manage-user.html">Manage Users</a>
+        <a href="reports.html">Reports</a>
+        <a href="#">Settings</a>
+    </nav>
+</header>
+<div class="container">
+    <div class="card">
+        <h2>Manage Users</h2>
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A1</td>
+                    <td>Clarisse Madlang-awa</td>
+                    <td>clarisse.madlang-awa@neu.edu.ph</td>
+                    <td>Admin</td>
+                    <td><a href="#">View</a> | <a href="#">Edit</a> | <a href="#">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>U1</td>
+                    <td>Juan Dela Cruz</td>
+                    <td>juan@email.com</td>
+                    <td>Customer</td>
+                    <td><a href="#">View</a> | <a href="#">Edit</a> | <a href="#">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

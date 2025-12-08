@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="AratNaPH_12-01-2025/styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; background: #e9f3f9; color: #333; margin: 0; }
+        header {
+            background: #d9eaf1;
+            padding: 10px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+        .logo img {
+            height: 60px;
+            width: auto;
+            display: block;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 20px;
+        }
+        nav a:hover {
+            background: #e0e0e0;
+        }
+        .logout-btn {
+            background: #e74c3c;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 18px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+        .logout-btn:hover {
+            background: #c0392b;
+        }
+        .container { padding: 30px; }
+        .card { background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .card h2 { margin-top: 0; }
+    </style>
+</head>
+<body>
+<header>
+    <a href="Homepage.html" class="logo">
+        <img src="AratNaPH_12-01-2025/images/Logo.png" alt="AratNaPH Logo">
+    </a>
+    <nav>
+        <a href="Homepage.html">Home</a>
+        <a href="Packages.html">Packages</a>
+        <a href="Hotel.html">Hotels</a>
+        <a href="#">Manage Users</a>
+        <a href="#">Reports</a>
+        <a href="#">Settings</a>
+    </nav>
+    <button class="logout-btn" onclick="window.location.href='Sign In.html'">Log Out</button>
+</header>
+<div class="container">
+    <div class="card">
+        <h2>Overview</h2>
+        <p>Welcome, Admin! Here you can manage bookings, users, and view reports.</p>
+    </div>
+    <div class="card">
+        <h2>Recent Bookings</h2>
+        <p>No recent bookings to show.</p>
+    </div>
+    <div class="card">
+        <h2>Quick Actions</h2>
+        <ul>
+            <li><a href="#">Add New Package</a></li>
+            <li><a href="#">Add New Hotel</a></li>
+            <li><a href="#">View All Users</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
