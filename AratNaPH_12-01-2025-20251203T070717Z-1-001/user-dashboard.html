@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <nav>
+    <h2>User Dashboard</h2>
+    <button id="logout-btn">Logout</button>
+  </nav>
+  <main>
+    <section id="profile-section">
+      <h3>My Profile</h3>
+      <form id="profile-form">
+        <label>Name
+          <input type="text" id="profile-name" required>
+        </label>
+        <label>Email
+          <input type="email" id="profile-email" readonly>
+        </label>
+        <button type="submit">Update Profile</button>
+      </form>
+    </section>
+    <section id="orders-section">
+      <h3>My Orders</h3>
+      <div id="orders-list"></div>
+      <h4>Place New Order</h4>
+      <form id="order-form">
+        <label>Item
+          <input type="text" id="order-item" required>
+        </label>
+        <label>Quantity
+          <input type="number" id="order-qty" min="1" value="1" required>
+        </label>
+        <button type="submit">Add Order</button>
+      </form>
+    </section>
+    <section id="support-section">
+      <h3>Support</h3>
+      <form id="support-form">
+        <label>Message
+          <textarea id="support-msg" required></textarea>
+        </label>
+        <button type="submit">Send Message</button>
+      </form>
+      <div id="support-messages"></div>
+    </section>
+  </main>
+  <script src="assets/app.js"></script>
+  <script>
+    requireUser();
+    const userEmail = localStorage.getItem('user');
+    document.getElementById('profile-email').value = userEmail;
+
+    // Load profile
+    const users = getDemoUsers();
+    const user = users.find(u => u.email === userEmail);
+    if (user && user.name) {
+      document.getElementById('profile-name').value = user.name;
+    }
+
+    // Update profile
+    document.getElementById('profile-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('profile-name').value.trim();
+      updateUserProfile(userEmail, { name });
+      alert('Profile updated!');
+    });
+
+    // Load orders
+    function renderOrders() {
+      const orders = getDemoOrders().filter(o => o.email === userEmail);
+      const html = orders.map(o => `<div><strong>${escapeHtml(o.item)}</strong> (x${o.qty}) - ${new Date(o.created).toLocaleDateString()} <button onclick="deleteDemoOrder('${o.id}'); renderOrders();">Delete</button></div>`).join('');
+      document.getElementById('orders-list').innerHTML = html || '<p>No orders yet.</p>';
+    }
+    renderOrders();
+
+    // Add order
+    document.getElementById('order-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      const item = document.getElementById('order-item').value.trim();
+      const qty = parseInt(document.getElementById('order-qty').value, 10);
+      addDemoOrder({ email: userEmail, item, qty });
+      document.getElementById('order-form').reset();
+      renderOrders();
+    });
+
+    // Load support messages
+    function renderSupport() {
+      const msgs = getSupportMessages().filter(m => m.email === userEmail);
+      const html = msgs.map(m => `<div><strong>${new Date(m.created).toLocaleString()}</strong>: ${escapeHtml(m.message)}</div>`).join('');
+      document.getElementById('support-messages').innerHTML = html || '<p>No messages sent.</p>';
+    }
+    renderSupport();
+
+    // Send support
+    document.getElementById('support-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      const message = document.getElementById('support-msg').value.trim();
+      sendSupportMessage({ email: userEmail, message });
+      document.getElementById('support-form').reset();
+      renderSupport();
+    });
+
+    // Logout
+    document.getElementById('logout-btn').addEventListener('click', function(){
+      localStorage.removeItem('user');
+      localStorage.removeItem('isAdmin');
+      window.location.href = 'Sign%20In.html';
+    });
+  </script>
+</body>
+</html>
